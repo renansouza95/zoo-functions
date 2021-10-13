@@ -4,7 +4,7 @@ const data = require('../data/zoo_data');
 
 function getAnimalsOlderThan(animal, age) {
   const animals = data.species.find((element) => element.name === animal);
-  return animals.residents.every((element) => element.age > age);
+  return animals.residents.every((element2) => element2.age > age);
 }
 
 console.log(getAnimalsOlderThan('lions', 5));
