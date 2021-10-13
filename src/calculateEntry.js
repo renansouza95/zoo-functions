@@ -8,11 +8,11 @@ function countEntrants(entrants) {
   const child = entrants.filter((person) => person.age < 18).length;
   const adult = entrants.filter((person) => person.age >= 18 && person.age < 50).length;
   const senior = entrants.filter((person) => person.age >= 50).length;
-  return { child, adult, senior, };
+  return { child, adult, senior };
   // return {
   //   child: entrants.filter((person) => person.age < 18).length,
   //   adult: entrants.filter((person) => person.age >= 18 && person.age < 50).length,
-  //   senior: entrants.filter((person) => person.age >= 50).length
+  //   senior: entrants.filter((person) => person.age >= 50).length,
   // }
 }
 
@@ -24,7 +24,7 @@ function calculateEntry(entrants) {
   }
   // const { prices } = data
   const sumChild = data.prices.child * visitantes.child;
-  const sumAdult = data.prices.adult * visitantes.adult
+  const sumAdult = data.prices.adult * visitantes.adult;
   const sumSenior = data.prices.senior * visitantes.senior;
   return sumChild + sumAdult + sumSenior;
 }
